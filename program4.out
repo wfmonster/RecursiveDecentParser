@@ -1,0 +1,82 @@
+enter <program> 1
+-->found {
+  enter <statement> 1
+    enter <assignment> 1
+    -->found let
+    -->found ID: i
+    -->found :=
+      enter <expression> 1
+        enter <boolean> 1
+          enter <relation> 1
+            enter <term> 1
+              enter <factor> 1
+                enter <unary> 1
+                -->found INTLIT: 0
+                exit <unary> 1
+              exit <factor> 1
+            exit <term> 1
+          exit <relation> 1
+        exit <boolean> 1
+      exit <expression> 1
+    -->found ;
+    exit <assignment> 1
+  exit <statement> 1
+  enter <statement> 2
+    enter <while> 1
+    -->found while
+    -->found (
+      enter <expression> 2
+        enter <boolean> 2
+          enter <relation> 2
+            enter <term> 2
+              enter <factor> 2
+              -->found not
+                enter <unary> 2
+                -->found (
+                  enter <expression> 3
+                    enter <boolean> 3
+                      enter <relation> 3
+                        enter <term> 3
+                          enter <factor> 3
+                            enter <unary> 3
+                            -->found ID: i
+                            exit <unary> 3
+                          exit <factor> 3
+                        exit <term> 3
+                      exit <relation> 3
+                    -->found <
+                      enter <relation> 4
+                        enter <term> 4
+                          enter <factor> 4
+                            enter <unary> 4
+                            -->found INTLIT: 5
+                            exit <unary> 4
+                          exit <factor> 4
+                        exit <term> 4
+                      exit <relation> 4
+                    exit <boolean> 3
+                  exit <expression> 3
+                -->found )
+                exit <unary> 2
+              exit <factor> 2
+            exit <term> 2
+          exit <relation> 2
+        exit <boolean> 2
+      exit <expression> 2
+    -->found )
+      enter <program> 2
+      -->found {
+        enter <statement> 3
+          enter <output> 1
+          -->found print
+          -->found string: "i: "
+          -->found ID: i
+          -->found ;
+          exit <output> 1
+        exit <statement> 3
+        enter <statement> 4
+          enter <assignment> 2
+          -->found let
+          -->found ID: i
+
+***ERROR: missing ':=' in assignment statement

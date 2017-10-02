@@ -1,0 +1,387 @@
+enter <program> 1
+-->found {
+  enter <statement> 1
+    enter <assignment> 1
+    -->found let
+    -->found ID: i
+    -->found :=
+      enter <expression> 1
+        enter <boolean> 1
+          enter <relation> 1
+            enter <term> 1
+              enter <factor> 1
+                enter <unary> 1
+                -->found INTLIT: 25
+                exit <unary> 1
+              exit <factor> 1
+            exit <term> 1
+          exit <relation> 1
+        exit <boolean> 1
+      exit <expression> 1
+    -->found ;
+    exit <assignment> 1
+  exit <statement> 1
+  enter <statement> 2
+    enter <assignment> 2
+    -->found let
+    -->found ID: j
+    -->found :=
+      enter <expression> 2
+        enter <boolean> 2
+          enter <relation> 2
+            enter <term> 2
+              enter <factor> 2
+                enter <unary> 2
+                -->found INTLIT: 50
+                exit <unary> 2
+              exit <factor> 2
+            exit <term> 2
+          exit <relation> 2
+        exit <boolean> 2
+      exit <expression> 2
+    -->found ;
+    exit <assignment> 2
+  exit <statement> 2
+  enter <statement> 3
+    enter <conditional> 1
+    -->found if
+    -->found (
+      enter <expression> 3
+        enter <boolean> 3
+          enter <relation> 3
+            enter <term> 3
+              enter <factor> 3
+                enter <unary> 3
+                -->found ID: i
+                exit <unary> 3
+              exit <factor> 3
+            exit <term> 3
+          exit <relation> 3
+        -->found >
+          enter <relation> 4
+            enter <term> 4
+              enter <factor> 4
+                enter <unary> 4
+                -->found ID: j
+                exit <unary> 4
+              exit <factor> 4
+            exit <term> 4
+          exit <relation> 4
+        exit <boolean> 3
+      exit <expression> 3
+    -->found )
+      enter <program> 2
+      -->found {
+        enter <statement> 4
+          enter <assignment> 3
+          -->found let
+          -->found ID: k
+          -->found :=
+            enter <expression> 4
+              enter <boolean> 4
+                enter <relation> 5
+                  enter <term> 5
+                    enter <factor> 5
+                      enter <unary> 5
+                      -->found INTLIT: 2
+                      exit <unary> 5
+                    exit <factor> 5
+                  -->found *
+                    enter <factor> 6
+                      enter <unary> 6
+                      -->found ID: i
+                      exit <unary> 6
+                    exit <factor> 6
+                  exit <term> 5
+                -->found +
+                  enter <term> 6
+                    enter <factor> 7
+                      enter <unary> 7
+                      -->found ID: j
+                      exit <unary> 7
+                    exit <factor> 7
+                  exit <term> 6
+                exit <relation> 5
+              exit <boolean> 4
+            exit <expression> 4
+          -->found ;
+          exit <assignment> 3
+        exit <statement> 4
+        enter <statement> 5
+          enter <output> 1
+          -->found print
+          -->found string: "k: "
+          -->found ID: k
+          -->found ;
+          exit <output> 1
+        exit <statement> 5
+        enter <statement> 6
+          enter <conditional> 2
+          -->found if
+          -->found (
+            enter <expression> 5
+              enter <boolean> 5
+                enter <relation> 6
+                  enter <term> 7
+                    enter <factor> 8
+                      enter <unary> 8
+                      -->found (
+                        enter <expression> 6
+                          enter <boolean> 6
+                            enter <relation> 7
+                              enter <term> 8
+                                enter <factor> 9
+                                  enter <unary> 9
+                                  -->found ID: k
+                                  exit <unary> 9
+                                exit <factor> 9
+                              exit <term> 8
+                            exit <relation> 7
+                          -->found <
+                            enter <relation> 8
+                              enter <term> 9
+                                enter <factor> 10
+                                  enter <unary> 10
+                                  -->found INTLIT: 200
+                                  exit <unary> 10
+                                exit <factor> 10
+                              exit <term> 9
+                            exit <relation> 8
+                          exit <boolean> 6
+                        exit <expression> 6
+                      -->found )
+                      exit <unary> 8
+                    exit <factor> 8
+                  exit <term> 7
+                exit <relation> 6
+              exit <boolean> 5
+            -->found and
+              enter <boolean> 7
+                enter <relation> 9
+                  enter <term> 10
+                    enter <factor> 11
+                      enter <unary> 11
+                      -->found (
+                        enter <expression> 7
+                          enter <boolean> 8
+                            enter <relation> 10
+                              enter <term> 11
+                                enter <factor> 12
+                                  enter <unary> 12
+                                  -->found ID: k
+                                  exit <unary> 12
+                                exit <factor> 12
+                              exit <term> 11
+                            exit <relation> 10
+                          -->found >
+                            enter <relation> 11
+                              enter <term> 12
+                                enter <factor> 13
+                                  enter <unary> 13
+                                  -->found INTLIT: 0
+                                  exit <unary> 13
+                                exit <factor> 13
+                              exit <term> 12
+                            exit <relation> 11
+                          exit <boolean> 8
+                        exit <expression> 7
+                      -->found )
+                      exit <unary> 11
+                    exit <factor> 11
+                  exit <term> 10
+                exit <relation> 9
+              exit <boolean> 7
+            exit <expression> 5
+          -->found )
+            enter <program> 3
+            -->found {
+              enter <statement> 7
+                enter <output> 2
+                -->found print
+                -->found string: "k is between 200 and 0."
+                -->found ;
+                exit <output> 2
+              exit <statement> 7
+            -->found }
+            exit <program> 3
+          -->found else
+            enter <program> 4
+            -->found {
+              enter <statement> 8
+                enter <output> 3
+                -->found print
+                -->found string: "k is not between 200 and 0."
+                -->found ;
+                exit <output> 3
+              exit <statement> 8
+            -->found }
+            exit <program> 4
+          exit <conditional> 2
+        exit <statement> 6
+      -->found }
+      exit <program> 2
+    -->found else
+      enter <program> 5
+      -->found {
+        enter <statement> 9
+          enter <assignment> 4
+          -->found let
+          -->found ID: k
+          -->found :=
+            enter <expression> 8
+              enter <boolean> 9
+                enter <relation> 12
+                  enter <term> 13
+                    enter <factor> 14
+                      enter <unary> 14
+                      -->found ID: i
+                      exit <unary> 14
+                    exit <factor> 14
+                  -->found *
+                    enter <factor> 15
+                      enter <unary> 15
+                      -->found ID: j
+                      exit <unary> 15
+                    exit <factor> 15
+                  exit <term> 13
+                -->found +
+                  enter <term> 14
+                    enter <factor> 16
+                      enter <unary> 16
+                      -->found INTLIT: 2
+                      exit <unary> 16
+                    exit <factor> 16
+                  exit <term> 14
+                exit <relation> 12
+              exit <boolean> 9
+            exit <expression> 8
+          -->found ;
+          exit <assignment> 4
+        exit <statement> 9
+        enter <statement> 10
+          enter <output> 4
+          -->found print
+          -->found string: "k: "
+          -->found ID: k
+          -->found ;
+          exit <output> 4
+        exit <statement> 10
+        enter <statement> 11
+          enter <conditional> 3
+          -->found if
+          -->found (
+            enter <expression> 9
+              enter <boolean> 10
+                enter <relation> 13
+                  enter <term> 15
+                    enter <factor> 17
+                      enter <unary> 17
+                      -->found (
+                        enter <expression> 10
+                          enter <boolean> 11
+                            enter <relation> 14
+                              enter <term> 16
+                                enter <factor> 18
+                                -->found -
+                                  enter <unary> 18
+                                  -->found ID: k
+                                  exit <unary> 18
+                                exit <factor> 18
+                              exit <term> 16
+                            exit <relation> 14
+                          -->found >
+                            enter <relation> 15
+                              enter <term> 17
+                                enter <factor> 19
+                                -->found -
+                                  enter <unary> 19
+                                  -->found INTLIT: 200
+                                  exit <unary> 19
+                                exit <factor> 19
+                              exit <term> 17
+                            exit <relation> 15
+                          exit <boolean> 11
+                        exit <expression> 10
+                      -->found )
+                      exit <unary> 17
+                    exit <factor> 17
+                  exit <term> 15
+                exit <relation> 13
+              exit <boolean> 10
+            -->found and
+              enter <boolean> 12
+                enter <relation> 16
+                  enter <term> 18
+                    enter <factor> 20
+                      enter <unary> 20
+                      -->found (
+                        enter <expression> 11
+                          enter <boolean> 13
+                            enter <relation> 17
+                              enter <term> 19
+                                enter <factor> 21
+                                -->found -
+                                  enter <unary> 21
+                                  -->found ID: k
+                                  exit <unary> 21
+                                exit <factor> 21
+                              exit <term> 19
+                            exit <relation> 17
+                          -->found <
+                            enter <relation> 18
+                              enter <term> 20
+                                enter <factor> 22
+                                  enter <unary> 22
+                                  -->found INTLIT: 0
+                                  exit <unary> 22
+                                exit <factor> 22
+                              exit <term> 20
+                            exit <relation> 18
+                          exit <boolean> 13
+                        exit <expression> 11
+                      -->found )
+                      exit <unary> 20
+                    exit <factor> 20
+                  exit <term> 18
+                exit <relation> 16
+              exit <boolean> 12
+            exit <expression> 9
+          -->found )
+            enter <program> 6
+            -->found {
+              enter <statement> 12
+                enter <output> 5
+                -->found print
+                -->found string: "-k is between -200 and 0."
+                -->found ;
+                exit <output> 5
+              exit <statement> 12
+            -->found }
+            exit <program> 6
+          -->found else
+            enter <program> 7
+            -->found {
+              enter <statement> 13
+                enter <output> 6
+                -->found print
+                -->found string: "-k is not between -200 and 0."
+                -->found ;
+                exit <output> 6
+              exit <statement> 13
+            -->found }
+            exit <program> 7
+          exit <conditional> 3
+        exit <statement> 11
+      -->found }
+      exit <program> 5
+    exit <conditional> 1
+  exit <statement> 3
+-->found }
+exit <program> 1
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+User Defined Symbols:
+i
+j
+k
